@@ -1,0 +1,23 @@
+micronaut:
+  application:
+    name: xambraboookstore
+  router:
+    static-resources:
+      swagger:
+        paths: classpath:META-INF/swagger
+        mapping: /swagger/**
+      swagger-ui:
+        paths: classpath:META-INF/swagger/views/swagger-ui
+        mapping: /swagger-ui/**
+datasources:
+  default:
+    driverClassName: org.postgresql.Driver
+    db-type: postgresql
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+jpa.default.properties.hibernate.hbm2ddl.auto: update
+netty:
+  default:
+    allocator:
+      max-order: 3
